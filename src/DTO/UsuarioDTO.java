@@ -2,9 +2,11 @@ package DTO;
 
 public class UsuarioDTO {
 
+    //Atributos
     String nome, senha, dataNasc, Celular, cpf, rg, email;
     double maoObra;
-
+    
+    //Métodos Acessores
     public String getDataNasc() {
         return dataNasc;
     }
@@ -67,17 +69,5 @@ public class UsuarioDTO {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-//id    
-    //nome
-    //dataNasc
-    //Celular
-    //valorMaoObra
-    //cpf
-    //rg
-    //email
-    //senha
-
-    
+    }  
 }
