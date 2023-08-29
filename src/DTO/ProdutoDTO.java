@@ -1,6 +1,6 @@
 package DTO;
 
-public class Produto {
+public class ProdutoDTO {
 
     //Atributos
     String nome, tipo;
@@ -12,11 +12,11 @@ public class Produto {
         return nome;
     }
 
-    public void setNome(String nome) throws NomeInvalido {
+    public void setNome(String nome) throws NomeInvalidoDTO {
         if (!"".equals(nome)) {
             this.nome = nome;
         } else {
-            throw new NomeInvalido();
+            throw new NomeInvalidoDTO();
         }
     }
 
@@ -24,11 +24,11 @@ public class Produto {
         return tipo;
     }
 
-    public void setTipo(String tipo) throws TipoInvalido {
+    public void setTipo(String tipo) throws TipoInvalidoDTO {
         if (!"".equals(tipo)) {
             this.tipo = tipo;
         } else {
-            throw new TipoInvalido();
+            throw new TipoInvalidoDTO();
         }
     }
 
@@ -36,12 +36,12 @@ public class Produto {
         return tempoProducao;
     }
 
-    public void setTempoProducao(double tempoProducao) throws TempoInvalido {
+    public void setTempoProducao(double tempoProducao) throws TempoInvalidoDTO {
         if (tempoProducao > 0) {
 
             this.tempoProducao = tempoProducao;
         } else {
-            throw new TempoInvalido();
+            throw new TempoInvalidoDTO();
         }
     }
 
@@ -49,11 +49,11 @@ public class Produto {
         return custoAprox;
     }
 
-    public void setCustoAprox(double custoAprox) throws CustoInvalido {
+    public void setCustoAprox(double custoAprox) throws CustoInvalidoDTO {
         if (custoAprox > 0) {
             this.custoAprox = custoAprox;
         } else {
-            throw new CustoInvalido();
+            throw new CustoInvalidoDTO();
         }
     }
 
@@ -77,11 +77,11 @@ public class Produto {
         return quantidade;
     }
 
-    public void setQuantidade(int quantidade) throws QuantidadeInvalida {
+    public void setQuantidade(int quantidade) throws QuantidadeInvalidaDTO {
         if (quantidade >= 0) {
             this.quantidade = quantidade;
         } else {
-            throw new QuantidadeInvalida();
+            throw new QuantidadeInvalidaDTO();
         }
     }
 

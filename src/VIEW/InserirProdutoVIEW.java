@@ -1,6 +1,6 @@
 package VIEW;
 
-import DTO.Produto;
+import DTO.ProdutoDTO;
 import javax.swing.JOptionPane;
 
 public class InserirProdutoVIEW extends javax.swing.JFrame {
@@ -8,21 +8,20 @@ public class InserirProdutoVIEW extends javax.swing.JFrame {
     String nome, tipo;
     double tempoProducao, custoAprox;
     int idProduto, quantidade;
-    Produto produto;
+    ProdutoDTO produto;
     boolean houveErro, editando;
 
     public InserirProdutoVIEW() {
-
         initComponents();
         titulo.setText("Adicionar Produto");
+        adicionar.setText("Adicionar Produto");
         editando = false;
         produto = null;
         setLocationRelativeTo(null);
         setResizable(false);
     }
 
-    public InserirProdutoVIEW(Produto produto) {
-
+    public InserirProdutoVIEW(ProdutoDTO produto) {
         initComponents();
         titulo.setText("Editar Produto");
         setLocationRelativeTo(null);
@@ -35,6 +34,7 @@ public class InserirProdutoVIEW extends javax.swing.JFrame {
         custoText.setText(Double.toString(produto.getCustoAprox()));
         valorText.setText(Double.toString(produto.getValor()));
         quantText.setText(Integer.toString(produto.getQuantidade()));
+        adicionar.setText("Confirmar Edição");
     }
 
     @SuppressWarnings("unchecked")
@@ -244,6 +244,12 @@ public class InserirProdutoVIEW extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Não foi possível criar um produto!");
             houveErro = false;
         }
+
+        if (editando) {
+            this.dispose();
+            JanelaAdmVIEW menu = new JanelaAdmVIEW();
+            menu.setVisible(true);
+        }
     }//GEN-LAST:event_adicionarActionPerformed
 
     private void voltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarActionPerformed
@@ -254,15 +260,15 @@ public class InserirProdutoVIEW extends javax.swing.JFrame {
 
     private void custoTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_custoTextFocusLost
         /**
-        try{
-            System.out.println(tempoText.getText());
-            System.out.println(custoText.getText());
-            produto.setValor(Double.parseDouble(tempoText.getText()), Double.parseDouble(custoText.getText()));
-        }
-        catch(NumberFormatException ex){
-            
-        }
-        **/
+         * try{ System.out.println(tempoText.getText());
+         * System.out.println(custoText.getText());
+         * produto.setValor(Double.parseDouble(tempoText.getText()),
+         * Double.parseDouble(custoText.getText())); }
+         * catch(NumberFormatException ex){
+         *
+         * }
+         *
+         */
     }//GEN-LAST:event_custoTextFocusLost
 
     /**

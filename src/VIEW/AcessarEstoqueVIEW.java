@@ -1,6 +1,6 @@
 package VIEW;
 
-import DTO.IndiceInvalido;
+import DTO.IndiceInvalidoDTO;
 import javax.swing.JOptionPane;
 
 public class AcessarEstoqueVIEW extends javax.swing.JFrame {
@@ -137,7 +137,7 @@ public class AcessarEstoqueVIEW extends javax.swing.JFrame {
            info.setVisible(true);
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(null, "Por favor digite um número!");
-        } catch (IndiceInvalido ex) {
+        } catch (IndiceInvalidoDTO ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage());
         }
 

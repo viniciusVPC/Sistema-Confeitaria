@@ -1,6 +1,6 @@
 package VIEW;
 
-import DTO.IdNaoEncontrado;
+import DTO.IdNaoEncontradoDTO;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -137,7 +137,7 @@ public class ProcDelVIEW extends javax.swing.JFrame {
             }
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(null, "Por favor digite um número!");
-        } catch (IdNaoEncontrado ex) {
+        } catch (IdNaoEncontradoDTO ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage());
         }
     }//GEN-LAST:event_botaoActionPerformed
