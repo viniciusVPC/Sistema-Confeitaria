@@ -195,17 +195,25 @@ public class Comportamento {
             JOptionPane.showMessageDialog(null, "Erro Comportamento: " + ex.getMessage());
             houveErro = true;
         }
-        usuario.setCpf(cpf);
-        usuario.setRg(rg);
-        usuario.setEmail(email);
-        usuario.setSenha(senha);
+
         try {
-            usuario.setMaoObra(maoObra);
-        } catch (MaoObraInvalidaDTO ex) {
+            usuario.setCpf(cpf);
+        } catch (CpfInvalidoDTO ex) {
             JOptionPane.showMessageDialog(null, "Erro Comportamento: " + ex.getMessage());
             houveErro = true;
         }
 
+        usuario.setRg(rg);
+
+        try {
+            usuario.setEmail(email);
+        } catch (EmailInvalidoDTO ex) {
+            JOptionPane.showMessageDialog(null, "Erro Comportamento: " + ex.getMessage());
+            houveErro = true;
+        }
+
+        usuario.setSenha(senha);
+        
         if (!editando) {
             usuario.setIdUsuario(indiceU + 1);
         } else {
@@ -217,13 +225,13 @@ public class Comportamento {
             String mensagem;
             if (!editando) {
                 mensagem = "Usuário cadastrado com sucesso. Seu novo id é: " + usuario.getIdUsuario();
-                
+
                 UsuarioDAO userDAO = new UsuarioDAO();
                 userDAO.cadastrarUsuario(usuario);
                 janela.dispose();
                 LoginVIEW login = new LoginVIEW();
                 login.setVisible(true);
-                
+
             } else {
                 mensagem = "Usuário editado com sucesso.";
             }

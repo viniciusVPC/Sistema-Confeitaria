@@ -1,5 +1,5 @@
 package VIEW;
-
+import DTO.*;
 public class LoginVIEW extends javax.swing.JFrame {
 
     String nome, senha;
@@ -133,6 +133,13 @@ public class LoginVIEW extends javax.swing.JFrame {
         }
         //</editor-fold>
 
+//        UsuarioDTO usuarioDTO = new UsuarioDTO();
+//        try{
+//        usuarioDTO.setDataNasc(22, 6, 2023);
+//        } catch (AnoInvalidoDTO ex){
+//            System.out.println("anoinvalido");
+//        }
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
