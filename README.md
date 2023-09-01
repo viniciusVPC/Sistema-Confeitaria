@@ -1,2 +1,4 @@
-# Sistema-Confeitaria
-Repositório criado pra armazenar um sistema de controle de estoque para Confeitarias
+![](src/IMAGES/Logo.png)
+#Um sistema de CRUD direcionado para confeitarias e padarias no geral.
+
+##Indice
