@@ -3,19 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Sistema_Registro_Confeitaria/src/VIEW/Comportamento.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Sistema_Registro_Confeitaria/src/DAO/UsuarioDAO.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Sistema_Registro_Confeitaria/src/DTO/CelularInvalidoDTO.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Sistema_Registro_Confeitaria/src/DTO/AnoInvalidoDTO.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Sistema_Registro_Confeitaria/src/DAO/ConexaoDAO.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Sistema_Registro_Confeitaria/src/DTO/MaoObraInvalidaDTO.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Sistema_Registro_Confeitaria/src/DTO/ProdutoDTO.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Sistema_Registro_Confeitaria/src/VIEW/AcessarEstoqueVIEW.java</file>
             <file>file:/C:/Users/User/Documents/NetBeansProjects/Sistema_Registro_Confeitaria/src/VIEW/LoginVIEW.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Sistema_Registro_Confeitaria/src/DTO/NomeInvalidoDTO.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Sistema_Registro_Confeitaria/src/DTO/UsuarioDTO.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Sistema_Registro_Confeitaria/src/VIEW/CriarUsuarioVIEW.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Sistema_Registro_Confeitaria/src/DTO/CustoInvalidoDTO.java</file>
         </group>
     </open-files>
 </project-private>
