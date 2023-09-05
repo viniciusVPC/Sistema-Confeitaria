@@ -38,7 +38,7 @@ public class UsuarioDTO {
     }
 
     public void setCelular(String celular) throws CelularInvalidoDTO {
-        if (celular.length() < 9) {
+        if (celular.length() >= 9) {
             this.Celular = Celular;
         } else {
             throw new CelularInvalidoDTO();

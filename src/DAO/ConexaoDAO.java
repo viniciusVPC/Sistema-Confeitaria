@@ -8,7 +8,7 @@ public class ConexaoDAO {
     //Atributos
     private String url = "jdbc:mysql://localhost:3306/banco";
     private String nome = "root";
-    private String senha = "root";
+    private String senha = "6{(C%Ws#L>dr(";
     private Connection conexao;
 
     public Connection conectar() {

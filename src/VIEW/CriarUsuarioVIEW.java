@@ -7,7 +7,6 @@ public class CriarUsuarioVIEW extends javax.swing.JFrame {
     //Atributos
     private String nome, celular, cpf, rg, email, senha;
     private int dia, mes, ano;
-    double maoObra;
     boolean houveErro, editando;
 
     public CriarUsuarioVIEW() {
@@ -40,8 +39,6 @@ public class CriarUsuarioVIEW extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         emailText = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        maoObraText = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         cadastrar = new javax.swing.JButton();
@@ -137,13 +134,6 @@ public class CriarUsuarioVIEW extends javax.swing.JFrame {
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("Email:");
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, -1, 32));
-        jPanel1.add(maoObraText, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, 370, 32));
-
-        jLabel14.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(196, 137, 148));
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("Valor de Mão de Obra:");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 210, 32));
 
         jLabel15.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(196, 137, 148));
@@ -203,7 +193,6 @@ public class CriarUsuarioVIEW extends javax.swing.JFrame {
         cpfText.setText("");
         rgText.setText("");
         emailText.setText("");
-        maoObraText.setText("");
         senhaText.setText("");
         senha2Text.setText("");
         nomeText.grabFocus();
@@ -242,7 +231,10 @@ public class CriarUsuarioVIEW extends javax.swing.JFrame {
             houveErro = true;
             JOptionPane.showMessageDialog(null, "Erro InserirProdutoVIEW: Ano inválido! Por favor digite um número!");
         }
+        
         celular = celularText.getText();
+        System.out.println(celular);
+        
         try {
             long temp;
             temp = Long.parseLong(cpfText.getText());
@@ -261,14 +253,7 @@ public class CriarUsuarioVIEW extends javax.swing.JFrame {
         }
         email = emailText.getText();
         
-        try {
-            maoObraText.setText(maoObraText.getText().replace(",", "."));
-            maoObra = Double.parseDouble(maoObraText.getText());
-        } catch (NumberFormatException ex) {
-            houveErro = true;
-            JOptionPane.showMessageDialog(null, "Erro InserirProdutoVIEW: Valor de Mão de Obra inválido! Por favor digite um número!");
-        }
-        
+               
         if (senhaText.getText().equals(senha2Text.getText())) {
             senha = senhaText.getText();
         } else {
@@ -277,7 +262,7 @@ public class CriarUsuarioVIEW extends javax.swing.JFrame {
         }
         
         if (!houveErro) {
-            Comportamento.InserirUsuario(nome, dia, mes, ano, celular, cpf, rg, email, senha, maoObra, this, null, false);
+            Comportamento.InserirUsuario(nome, dia, mes, ano, celular, cpf, rg, email, senha, this, null, false);
         } else {
             JOptionPane.showMessageDialog(null, "Não foi possível cadastrar um usuário!");
             houveErro = false;
@@ -311,7 +296,6 @@ public class CriarUsuarioVIEW extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
@@ -322,7 +306,6 @@ public class CriarUsuarioVIEW extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField maoObraText;
     private javax.swing.JTextField mesText;
     private javax.swing.JTextField nomeText;
     private javax.swing.JTextField rgText;

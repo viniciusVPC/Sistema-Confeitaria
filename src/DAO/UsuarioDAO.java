@@ -31,7 +31,7 @@ public class UsuarioDAO {
     public void cadastrarUsuario(UsuarioDTO objUsuarioDTO){
         co = new ConexaoDAO().conectar();
         try{
-            String sql = "insert into Usuario (nome_usuario, senha_usuario, data_usuario, celular_usuario, cpf_usuario, rg_usuario, email_usuario) values(?,?,?,?,?,?,?,?)";
+            String sql = "insert into Usuario (nome_usuario, senha_usuario, data_usuario, celular_usuario, cpf_usuario, rg_usuario, email_usuario) values(?,?,?,?,?,?,?)";
             pstm = co.prepareStatement(sql);
             pstm.setString(1, objUsuarioDTO.getNome());
             pstm.setString(2, objUsuarioDTO.getSenha());

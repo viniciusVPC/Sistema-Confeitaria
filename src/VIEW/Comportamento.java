@@ -169,7 +169,7 @@ public class Comportamento {
         throw new IdNaoEncontradoDTO();
     }
 
-    static void InserirUsuario(String nome, int dia, int mes, int ano, String celular, String cpf, String rg, String email, String senha, double maoObra, CriarUsuarioVIEW janela, UsuarioDTO usuarioEdit, boolean editando) {
+    static void InserirUsuario(String nome, int dia, int mes, int ano, String celular, String cpf, String rg, String email, String senha, CriarUsuarioVIEW janela, UsuarioDTO usuarioEdit, boolean editando) {
         UsuarioDTO usuario;
         if (editando) {
             usuario = usuarioEdit;
